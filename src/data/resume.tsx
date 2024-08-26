@@ -18,6 +18,12 @@ export const DATA = {
     "Node.js",
     "Python",
   ],
+  techStack: [
+    "ShadCN UI",
+    "Magic UI",
+    "Tailwind CSS",
+    "Prisma",
+  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -141,11 +147,12 @@ export const DATA = {
     {
       school: "Stanford University",
       href: "https://www.stanford.edu/",
-      degree: "Computer Science, Artificial Intelligence Specialization",
+      degree: "Computer Science | Artificial Intelligence Specialization",
       logoUrl: "/stanford.png",
       start: "2024",
       end: "2028",
-      description: "",
+      description: "Planned Freshman Courses: CS 106a, CS 106b, CS 109",
+      location: "Stanford, CA",
     },
     {
       school: "North Kansas City High School",
@@ -154,7 +161,8 @@ export const DATA = {
       logoUrl: "/northkansascityhighschool.png",
       start: "2020",
       end: "2024",
-      description: "GPA: 4.58\nACT: 34\nSAT: 1510\n\nMath Club Founder\nChess Club President\n\nMissouri Scholars 100\nKC Scholars $50,000 Scholarship\nUSGIF High School Certificate\n\nLINC Chess: 2nd place and 5th place in Chess Tournaments of ‘22\nFBLA: 2nd in E-Business Team Event, 2nd in Help Desk, and 5th in IT Introduction\nDECA: 2nd place in Principles of Business Management Administration",
+      description: "GPA: 4.58\nACT: 34\nSAT: 1510\n\nMath Club Founder\nChess Club President\nGame Development Club Vice President\n\nMissouri Scholars 100\nKC Scholars $50,000 Scholarship\nUSGIF High School Certificate\n\nLINC Chess: 2nd place and 5th place in Chess Tournaments of ‘22\nFBLA: 2nd in E-Business Team Event, 2nd in Help Desk, and 5th in IT Introduction\nDECA: 2nd place in Principles of Business Management Administration",
+      location: "Kansas City, MO",
     },
     {
       school: "International Baccalaureate in Computer Science",
@@ -164,6 +172,7 @@ export const DATA = {
       start: "2020",
       end: "2024",
       description: "Earned the International Baccalaureate Diploma with a focus on higher-level courses in chemistry, mathematics, and computer science.\n\nWrote a research paper and made a machine learning model to predict chess players' elo based on their games in IB Math Analysis & Approaches HL.",
+      location: "Vietnam",
     },
     {
       school: "Northgate Middle School",
@@ -197,126 +206,118 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Harvard Essay Review",
+      href: "https://harvardessayreview.vercel.app/",
+      dates: "May 2024 - Aug 2024",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "My friend started his college consultation business, so I helped him to make a website.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
-        "Stripe",
         "Shadcn UI",
-        "Magic UI",
+        "Google Cloud API",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    },
-    {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "Jun 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
+          href: "https://harvardessayreview.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/kimkhoi2202/harvardessayreview.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video:
+        "/projects-demo/harvard-essay-review.mp4",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
+      title: "IGS Website",
+      href: "https://igs-website-usys.vercel.app/",
+      dates: "Jun 2024 - Sep 2024",
+      active: true,
+      description:
+        "Rewoked the company's website from WordPress to a more modern NextJS website",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+        "ShadCN UI",
+        "Magic UI",
+        "Acernity UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://igs-website-usys.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/kimkhoi2202/igs-website.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/projects-demo/igs-website.mp4",
+    },
+    {
+      title: "Fixture Database",
+      href: "https://fixturedatabase.vercel.app/",
       dates: "April 2023 - September 2023",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Developed an internal custom web app solution to manage the company's large database.\nThis is a demo public version (no sensitive data).",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
         "Shadcn UI",
         "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "https://fixturedatabase.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github.com/kimkhoi2202/fixturedatabase",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/projects-demo/fixture-database.png",
+      video: "",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
+      title: "Book Mentor",
+      href: "https://youtu.be/BjZTNLW-298?si=sQr_nLyqWegVqOoz",
       dates: "April 2023 - March 2024",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "This app makes the experience of reading books more personalized. They can talk to the book authors using AI.",
       technologies: [
         "Next.js",
         "Typescript",
-        "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
         "Shadcn UI",
         "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
       ],
       links: [
         {
           type: "Website",
-          href: "https://automatic.chat",
+          href: "https://book-mentor-zeta.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        "/projects-demo/book-mentor.mp4",
     },
   ],
   hackathons: [
@@ -325,20 +326,20 @@ export const DATA = {
       dates: "November 23rd - 25th, 2018",
       location: "National",
       description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
+        "",
       image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+        "/cac.jpg",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
     {
-      title: "ElevenLabs AI Hackathon",
+      title: "Eleven Labs AI Hackathon",
       dates: "September 14th - 16th, 2018",
       location: "International",
       description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
+        "",
       image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
+        "/elevenlabs.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
