@@ -41,10 +41,10 @@ export const ResumeCard = ({
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -111,7 +111,8 @@ export const ResumeCard = ({
               role="button"
             >
               {title}
-              {badges && (
+              {/* Render badges only if not on mobile */}
+              {!isMobile && badges && (
                 <span className="inline-flex gap-x-1">
                   {badges.map((badge) => (
                     <Badge
