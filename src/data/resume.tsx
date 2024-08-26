@@ -6,7 +6,6 @@ export const DATA = {
   initials: "KL",
   url: "https://kimkhoilam.com/",
   location: "Stanford, CA",
-  locationLink: "https://www.google.com/maps/place/Stanford,+CA/",
   description:
     "and I major in Computer Science and Artificial Intelligence at Stanford University.",
   summary:
@@ -149,15 +148,6 @@ export const DATA = {
       description: "",
     },
     {
-      school: "Peterson Academy",
-      href: "https://petersonacademy.com/",
-      degree: "Learning How to Think",
-      logoUrl: "/petersonacademy.png",
-      start: "2024",
-      end: "2024",
-      description: "Intro to Nietzsche: How to Philosophize with a Hammer\nIntroduction to Nutrition\nIntro to Psychology\nThe Greatest Leaders in History: Heroes\nSymbolism in Christianity\nThe Art of Storytelling\nPlato: The Dawn of Thought\nIntro to Neuroscience\nIntelligence, Rationality, Wisdom, Spirituality\nIntro to Cosmology\nThe Psychology of Social Status\nThe Economics of Human Flourishing\nThe History of Western Music\nPost-Modern Philosophy",
-    },
-    {
       school: "North Kansas City High School",
       href: "https://nkhs.nkcschools.org/",
       degree: "Salutatorian",
@@ -192,6 +182,17 @@ export const DATA = {
       start: "2017",
       end: "2019",
       description: "GPA: 2.7",
+    },
+  ],
+  learning: [
+    {
+      school: "Peterson Academy",
+      href: "https://petersonacademy.com/",
+      degree: "Learning How to Think",
+      logoUrl: "/petersonacademy.png",
+      start: "2024",
+      end: "2024",
+      description: "Intro to Nietzsche: How to Philosophize with a Hammer\nIntroduction to Nutrition\nIntro to Psychology\nThe Greatest Leaders in History: Heroes\nSymbolism in Christianity\nThe Art of Storytelling\nPlato: The Dawn of Thought\nIntro to Neuroscience\nIntelligence, Rationality, Wisdom, Spirituality\nIntro to Cosmology\nThe Psychology of Social Status\nThe Economics of Human Flourishing\nThe History of Western Music\nPost-Modern Philosophy",
     },
   ],
   projects: [
@@ -341,5 +342,5 @@ export const DATA = {
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
-  ],  
+  ],
 } as const;

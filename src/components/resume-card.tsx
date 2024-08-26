@@ -19,7 +19,6 @@ interface ResumeCardProps {
   period: string;
   description?: string;
   location?: string;
-  locationLink?: string;
 }
 
 export const ResumeCard = ({
@@ -32,12 +31,33 @@ export const ResumeCard = ({
   period,
   description,
   location,
-  locationLink,
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (isMobile) {
+      setIsExpanded(true);
+    }
+  }, [isMobile]);
 
   const handleTitleClick = () => {
-    setIsExpanded(!isExpanded);
+    if (!isMobile) {
+      setIsExpanded(!isExpanded);
+    }
   };
 
   const handleTextClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -45,7 +65,7 @@ export const ResumeCard = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" || e.key === " ") {
+    if (!isMobile && (e.key === "Enter" || e.key === " ")) {
       setIsExpanded(!isExpanded);
     }
   };
@@ -108,12 +128,14 @@ export const ResumeCard = ({
                   ))}
                 </span>
               )}
-              <ChevronRightIcon
-                className={cn(
-                  "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
-                  isExpanded ? "rotate-90" : "rotate-0"
-                )}
-              />
+              {!isMobile && (
+                <ChevronRightIcon
+                  className={cn(
+                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                    isExpanded ? "rotate-90" : "rotate-0"
+                  )}
+                />
+              )}
             </h3>
             <button
               className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right"
@@ -135,17 +157,15 @@ export const ResumeCard = ({
               {subtitle}
             </div>
           )}
-          {location && (
+          {isMobile && location && (
             <div className="font-sans text-xs text-muted-foreground mt-1">
-              <Link href={locationLink ?? "#"} target="_blank" rel="noopener noreferrer">
-                <span className="text-blue-500 underline cursor-pointer">{location}</span>
-              </Link>
+              {location}
             </div>
           )}
         </CardHeader>
         {description && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: isMobile ? 1 : 0, height: isMobile ? "auto" : 0 }}
             animate={{
               opacity: isExpanded ? 1 : 0,
               height: isExpanded ? "auto" : 0,
