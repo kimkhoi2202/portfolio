@@ -176,9 +176,9 @@ export const DATA = {
     },
     {
       school: "Northgate Middle School",
-      href: "https://uwaterloo.ca",
+      href: "https://ngms.nkcschools.org/",
       degree: "Honor Roll",
-      logoUrl: "/waterloo.png",
+      logoUrl: "/northgate.png",
       start: "2019",
       end: "2020",
       description: "GPA: 4.0\nPrincipal's Honor Roll",
