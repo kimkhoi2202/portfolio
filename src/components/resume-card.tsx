@@ -55,7 +55,7 @@ export const ResumeCard = ({
   }, [isMobile]);
 
   const handleTitleClick = () => {
-    if (!isMobile) {
+    if (!isMobile && description) {
       setIsExpanded(!isExpanded);
     }
   };
@@ -65,7 +65,7 @@ export const ResumeCard = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isMobile && (e.key === "Enter" || e.key === " ")) {
+    if (!isMobile && description && (e.key === "Enter" || e.key === " ")) {
       setIsExpanded(!isExpanded);
     }
   };
@@ -104,11 +104,14 @@ export const ResumeCard = ({
         <CardHeader>
           <div className="flex items-center justify-between gap-x-2 text-base">
             <h3
-              className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm cursor-pointer"
-              onClick={handleTitleClick}
-              onKeyDown={handleKeyDown}
+              className={cn(
+                "inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm",
+                { "cursor-pointer": description } // Add cursor pointer only if there is a description
+              )}
+              onClick={description ? handleTitleClick : undefined}
+              onKeyDown={description ? handleKeyDown : undefined}
               tabIndex={0}
-              role="button"
+              role={description ? "button" : undefined}
             >
               {title}
               {/* Render badges only if not on mobile */}
@@ -129,7 +132,8 @@ export const ResumeCard = ({
                   ))}
                 </span>
               )}
-              {!isMobile && (
+              {/* Only show ChevronRightIcon if there's a description */}
+              {!isMobile && description && (
                 <ChevronRightIcon
                   className={cn(
                     "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",

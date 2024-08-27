@@ -13,17 +13,33 @@ export const DATA = {
   avatarUrl: "/koi.gif",
   skills: [
     "Next.js",
-    "React",
+    "HTML",
+    "JavaScript",
     "Typescript",
+    "CSS",
+    "Tailwind CSS",
+    "React",
     "Node.js",
+    "Java",
     "Python",
   ],
   techStack: [
-    "ShadCN UI",
-    "Magic UI",
+    "Next.js",
+    "React.js",
+    "Node.js",
     "Tailwind CSS",
     "Prisma",
-  ],
+    "Supabase",
+    "Convex",
+    "Next Auth",
+    "PostgreSQL",
+    "MongoDB",
+    "Astro",
+    "Drizzle",
+    "Hono",
+    "Lemon Squeezy",
+    "Plaid"
+  ],  
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -116,7 +132,7 @@ export const DATA = {
       start: "May 2022",
       end: "Aug 2022",
       description:
-        "Developed the course's content, supervise other coaches, and personally helped 15+ students 1-on-1 to improve their personal productivity. Helped manage and host events for 130+ international students community on Slack. Main speaker at the graduation ceremony.",
+        "Developed the course's content, supervised other coaches, and personally helped 15+ students 1-on-1 to improve their personal productivity. Helped manage and host events for 130+ international students community on Slack. Main speaker at the graduation ceremony.",
     },
     {
       company: "Transform Your Grades Course",
@@ -200,45 +216,43 @@ export const DATA = {
       degree: "Learning How to Think",
       logoUrl: "/petersonacademy.png",
       start: "2024",
-      end: "2024",
-      description: "Intro to Nietzsche: How to Philosophize with a Hammer\nIntroduction to Nutrition\nIntro to Psychology\nThe Greatest Leaders in History: Heroes\nSymbolism in Christianity\nThe Art of Storytelling\nPlato: The Dawn of Thought\nIntro to Neuroscience\nIntelligence, Rationality, Wisdom, Spirituality\nIntro to Cosmology\nThe Psychology of Social Status\nThe Economics of Human Flourishing\nThe History of Western Music\nPost-Modern Philosophy",
+      end: "Present",
+      description: "",
+      // description: "Intro to Nietzsche: How to Philosophize with a Hammer\nIntroduction to Nutrition\nIntro to Psychology\nThe Greatest Leaders in History: Heroes\nSymbolism in Christianity\nThe Art of Storytelling\nPlato: The Dawn of Thought\nIntro to Neuroscience\nIntelligence, Rationality, Wisdom, Spirituality\nIntro to Cosmology\nThe Psychology of Social Status\nThe Economics of Human Flourishing\nThe History of Western Music\nPost-Modern Philosophy",
+    },
+    {
+      school: "iCanStudy",
+      href: "https://programs.icanstudy.com/academic",
+      degree: "Learning How to Learn",
+      logoUrl: "/icanstudy.jpg",
+      start: "2024",
+      end: "Present",
+      description: "",
+    },
+    {
+      school: "STAGE Academy",
+      href: "https://stageacademy.mykajabi.com/",
+      degree: "Learning How to Communicate",
+      logoUrl: "/stage-academy.png",
+      start: "2024",
+      end: "Present",
+      description: "",
+    },
+    {
+      school: "Part-time YouTube Academy",
+      href: "https://petersonacademy.com/",
+      degree: "Learning How to YouTube",
+      logoUrl: "/ptya.png",
+      start: "2023",
+      end: "Present",
+      description: "",
     },
   ],
   projects: [
     {
-      title: "Harvard Essay Review",
-      href: "https://harvardessayreview.vercel.app/",
-      dates: "May 2024 - Aug 2024",
-      active: true,
-      description:
-        "My friend started his college consultation business, so I helped him to make a website.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Google Cloud API",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://harvardessayreview.vercel.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/kimkhoi2202/harvardessayreview.git",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "/projects-demo/harvard-essay-review.mp4",
-    },
-    {
       title: "IGS Website",
       href: "https://igs-website-usys.vercel.app/",
-      dates: "Jun 2024 - Sep 2024",
+      dates: "Aug 2024 - Sep 2024",
       active: true,
       description:
         "Rewoked the company's website from WordPress to a more modern NextJS website",
@@ -268,7 +282,7 @@ export const DATA = {
     {
       title: "Fixture Database",
       href: "https://fixturedatabase.vercel.app/",
-      dates: "April 2023 - September 2023",
+      dates: "Jul 2024 - Sep 2024",
       active: true,
       description:
         "Developed an internal custom web app solution to manage the company's large database.\nThis is a demo public version (no sensitive data).",
@@ -276,7 +290,7 @@ export const DATA = {
         "Next.js",
         "Typescript",
         "TailwindCSS",
-        "Shadcn UI",
+        "ShadCN UI",
         "Magic UI",
       ],
       links: [
@@ -295,6 +309,56 @@ export const DATA = {
       video: "",
     },
     {
+      title: "College Owl AI",
+      href: "https://interesting-stick-511163.framer.app/",
+      dates: "Aug 2024 - Present",
+      active: true,
+      description:
+        "I made a website for a startup using Framer. Best website copywriting I've ever done.",
+      technologies: [
+        "Framer",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://interesting-stick-511163.framer.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/projects-demo/college-owl-ai.mp4",
+    },
+    {
+      title: "Harvard Essay Review",
+      href: "https://harvardessayreview.vercel.app/",
+      dates: "May 2024 - Aug 2024",
+      active: true,
+      description:
+        "My friend started his college consultation business, so I helped him to make a website.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+        "ShadCN UI",
+        "Google Cloud API",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://harvardessayreview.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/kimkhoi2202/harvardessayreview.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video:
+        "/projects-demo/harvard-essay-review.mp4",
+    },
+    {
       title: "Book Mentor",
       href: "https://youtu.be/BjZTNLW-298?si=sQr_nLyqWegVqOoz",
       dates: "April 2023 - March 2024",
@@ -305,7 +369,7 @@ export const DATA = {
         "Next.js",
         "Typescript",
         "TailwindCSS",
-        "Shadcn UI",
+        "ShadCN UI",
         "Magic UI",
       ],
       links: [
@@ -326,7 +390,7 @@ export const DATA = {
       dates: "November 23rd - 25th, 2018",
       location: "National",
       description:
-        "",
+        "Finalist: [Hello](https://www.congressionalappchallenge.us/23-MO05/)\n",
       image:
         "/cac.jpg",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",

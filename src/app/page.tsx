@@ -94,7 +94,6 @@ export default function Page() {
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
                 description={education.description}
-                // Remove the location prop here
               />
             </BlurFade>
           ))}
@@ -140,7 +139,7 @@ export default function Page() {
       </section>
       
       <section id="tech-stack">
-        <div className="flex min-h-0 flex-col gap-y-3">
+        <div className="flex flex-col gap-y-3 items-start">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <h2 className="text-xl font-bold">Tech Stack</h2>
           </BlurFade>
