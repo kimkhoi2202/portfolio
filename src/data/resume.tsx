@@ -240,7 +240,7 @@ export const DATA = {
     },
     {
       school: "Part-time YouTube Academy",
-      href: "https://petersonacademy.com/",
+      href: "https://ptya.com/part-time-youtuber-academy/",
       degree: "Learning How to YouTube",
       logoUrl: "/ptya.png",
       start: "2023",
@@ -285,7 +285,7 @@ export const DATA = {
       dates: "Jul 2024 - Sep 2024",
       active: true,
       description:
-        "Developed an internal custom web app solution to manage the company's large database.\nThis is a demo public version (no sensitive data).",
+        "Developed an internal custom web app solution to manage the company's large database.",
       technologies: [
         "Next.js",
         "Typescript",
