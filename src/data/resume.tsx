@@ -80,7 +80,7 @@ export const DATA = {
       start: "Jun 2024",
       end: "Sep 2024",
       description:
-        "IGS specializes in supply chain management and electronic repairs to large manufacturers such as Apple, Google, and Dell.\n\nReworked company's website from WordPress to a more modern website. Will connect to the company's domain after WordPress subscription ends.\nBefore: https://internash.us\nAfter: https://igs-website-usys.vercel.app\n\nBuilt an internal custom web app solution to manage the company's large database and speeding up the repair process.\nPublic version demo (no sensitive data): https://fixturedatabase.vercel.app",
+        "IGS specializes in supply chain management and electronic repairs to large manufacturers such as Apple, Google, and Dell.\n\nReworked company's website from WordPress to a more modern website. Will connect to the company's domain after WordPress subscription ends.\nBefore: https://internash.us\nAfter: https://igs-website-usys.vercel.app\n\nBuilt an internal custom web app solution to manage the company's large database and speed up the repair process.\nPublic version demo (no sensitive data): https://fixturedatabase.vercel.app",
     },
     {
       company: "Gateway Global",
