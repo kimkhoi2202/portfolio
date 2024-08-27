@@ -20,7 +20,8 @@ export async function generateMetadata({
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+
+  let ogImage = `${DATA.url}/preview.png`;
 
   return {
     title,
@@ -34,6 +35,9 @@ export async function generateMetadata({
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${title} preview image`,
         },
       ],
     },
