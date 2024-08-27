@@ -16,7 +16,7 @@ const pageTitle = "Khoi Lam";
 const pageDescription =
   "I'm a Stanford student in Computer Science and Artificial Intelligence.";
 const pageUrl = "https://www.khoikimlam.com/";
-const ogImage = "/preview.png";
+const ogImage = "${pageUrl}preview.png";
 
 export default function Page() {
   return (
