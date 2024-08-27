@@ -16,8 +16,7 @@ const pageTitle = "Khoi Lam";
 const pageDescription =
   "I'm a Stanford student in Computer Science and Artificial Intelligence.";
 const pageUrl = "https://www.khoikimlam.com/";
-const ogImage =
-  "https://opengraph.b-cdn.net/production/images/469a2261-61d4-4a9c-8ba1-5eb33cd3a8a1.png?token=FvqlTlqfEDF1QLvfYEyf0ChMnf6kyVulTRSh4LASP5g&height=514&width=1200&expires=33260744341";
+const ogImage = "preview.png";
 
 export default function Page() {
   return (
