@@ -255,7 +255,7 @@ export const DATA = {
       dates: "Aug 2024 - Sep 2024",
       active: true,
       description:
-        "Rewoked the company's website from WordPress to a more modern NextJS website",
+        "Reworked the company's website from WordPress to a more modern NextJS website.",
       technologies: [
         "Next.js",
         "Typescript",
