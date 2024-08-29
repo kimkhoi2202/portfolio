@@ -71,7 +71,7 @@ export const DATA = {
       },
       Youtube: {
         name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
+        url: "https://www.youtube.com/@khoinotfish/videos",
         icon: Icons.youtube,
         navbar: true,
       },
@@ -390,7 +390,7 @@ export const DATA = {
       dates: "November 23rd - 25th, 2018",
       location: "National",
       description:
-        "Finalist: [Hello](https://www.congressionalappchallenge.us/23-MO05/)\n",
+        "Finalist: https://www.congressionalappchallenge.us/23-MO05/",
       image:
         "/cac.jpg",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
