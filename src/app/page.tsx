@@ -12,11 +12,11 @@ import Head from "next/head";
 
 const BLUR_FADE_DELAY = 0.04;
 
-const pageTitle = "Khoi Lam";
+const pageTitle = "Khoi Lam - CS Major @ Stanford University";
 const pageDescription =
-  "I'm a Stanford student in Computer Science and Artificial Intelligence.";
+  "I'm a Stanford student specializing in Computer Science and Artificial Intelligence, passionate about building full-stack applications and exploring AI technologies.";
 const pageUrl = "https://www.khoikimlam.com/";
-const ogImage = "${pageUrl}preview.png";
+const ogImage = `${pageUrl}preview.png`;
 
 export default function Page() {
   return (
