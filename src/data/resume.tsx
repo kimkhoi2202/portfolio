@@ -24,21 +24,6 @@ export const DATA = {
     "Python",
   ],
   techStack: [
-    "Next.js",
-    "React.js",
-    "Node.js",
-    "Tailwind CSS",
-    "Prisma",
-    "Supabase",
-    "Convex",
-    "Next Auth",
-    "PostgreSQL",
-    "MongoDB",
-    "Astro",
-    "Drizzle",
-    "Hono",
-    "Lemon Squeezy",
-    "Plaid"
   ],  
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
