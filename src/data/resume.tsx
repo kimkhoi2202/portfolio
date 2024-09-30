@@ -210,7 +210,7 @@ export const DATA = {
       href: "https://programs.icanstudy.com/academic",
       degree: "Learning How to Learn",
       logoUrl: "/icanstudy.jpg",
-      start: "2024",
+      start: "2023",
       end: "Present",
       description: "",
     },
