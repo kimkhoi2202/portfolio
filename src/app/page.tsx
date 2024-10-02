@@ -247,7 +247,7 @@ export default function Page() {
                   </h2>
                   <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     During my time in high school, I attended{" "}
-                    {DATA.hackathons.length} hackathons. It was inspiring to see how much a small team can accomplish in 2-3 days. I&apos;m planning to attend more hackathons in the future.
+                    {DATA.hackathons.length} hackathons. I&apos;m planning to attend more hackathons in the future.
                   </p>
                 </div>
               </div>

@@ -12,6 +12,9 @@ export const DATA = {
     "I love coding, machine learning, and AI. I also like building full stack applications with NextJS for fun in my freetime. I've won top awards at international and national hackathons. My 10-year goal is to build AGI. My 1-year goal is to grind LeetCode and learn that binary tree thing.",
   avatarUrl: "/koi.gif",
   skills: [
+    "Python",
+    "Java",
+    "C++",
     "Next.js",
     "HTML",
     "JavaScript",
@@ -19,9 +22,7 @@ export const DATA = {
     "CSS",
     "Tailwind CSS",
     "React",
-    "Node.js",
-    "Java",
-    "Python",
+    "Node.js"
   ],
   techStack: [
   ],  
@@ -152,7 +153,7 @@ export const DATA = {
       logoUrl: "/stanford.png",
       start: "2024",
       end: "2028",
-      description: "Planned Freshman Courses: CS 106a, CS 106b, CS 109",
+      description: "Currently taking 106B Fall Quarter",
       location: "Stanford, CA",
     },
     {
@@ -354,8 +355,7 @@ export const DATA = {
         "Next.js",
         "Typescript",
         "TailwindCSS",
-        "ShadCN UI",
-        "Magic UI",
+        "ShadCN UI"
       ],
       links: [
         {
@@ -386,7 +386,7 @@ export const DATA = {
       dates: "September 14th - 16th, 2018",
       location: "International",
       description:
-        "",
+        "7th Place",
       image:
         "/elevenlabs.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
