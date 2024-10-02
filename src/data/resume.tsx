@@ -1,5 +1,13 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, FileText } from "lucide-react";
+
+type NavbarItem = {
+  href: string;
+  icon: React.ComponentType<any>;
+  label: string;
+  target?: string;
+  rel?: string;
+};
 
 export const DATA = {
   name: "Khoi Lam",
@@ -29,7 +37,14 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
-  ],
+    {
+      href: "https://drive.google.com/file/d/1Tt2mS1Qh3CrgBKlAEtmb1G_MZm6oaJjD/view?usp=sharing",
+      icon: FileText,
+      label: "Resume",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+  ] as NavbarItem[],
   contact: {
     email: "khoilam@stanford.edu",
     tel: "+8162569384",
