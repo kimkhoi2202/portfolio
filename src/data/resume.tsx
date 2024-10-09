@@ -35,10 +35,10 @@ export const DATA = {
   techStack: [
   ],  
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/", icon: HomeIcon, label: "Home" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
     {
-      href: "https://drive.google.com/file/d/1Tt2mS1Qh3CrgBKlAEtmb1G_MZm6oaJjD/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1sE6l2EeFhhcsAJiiTs6I-8Gr-vcUDTbn/view?usp=sharing",
       icon: FileText,
       label: "Resume",
       target: "_blank",
@@ -168,7 +168,8 @@ export const DATA = {
       logoUrl: "/stanford.png",
       start: "2024",
       end: "2028",
-      description: "Currently taking 106B Fall Quarter",
+      description: "",
+      // description: "Currently taking 106B Fall Quarter",
       location: "Stanford, CA",
     },
     {
