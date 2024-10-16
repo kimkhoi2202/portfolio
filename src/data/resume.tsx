@@ -311,6 +311,29 @@ export const DATA = {
       video: "",
     },
     {
+      title: "Online Poker Tracker",
+      href: "https://onlinepokertracker.com/",
+      dates: "Oct 2024 - Current",
+      active: true,
+      description:
+        "An online virtual poker chip tracker that allows the players to play poker without physical chips.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "TailwindCSS",
+        "ShadCN UI",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://onlinepokertracker.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "/projects-demo/online-poker-tracker.mp4",
+    },
+    {
       title: "College Owl AI",
       href: "https://interesting-stick-511163.framer.app/",
       dates: "Aug 2024 - Present",
