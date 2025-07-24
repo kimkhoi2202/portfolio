@@ -38,11 +38,9 @@ export const DATA = {
     // { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
     {
-      href: "https://drive.google.com/file/d/1sE6l2EeFhhcsAJiiTs6I-8Gr-vcUDTbn/view?usp=sharing",
+      href: "/resume",
       icon: FileText,
       label: "Resume",
-      target: "_blank",
-      rel: "noopener noreferrer",
     },
   ] as NavbarItem[],
   contact: {
