@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/resume',
-        destination: '/Khoi Lam Resume.pdf',
+        destination: '/Khoi-Lam-Resume.pdf',
         permanent: true,
       },
     ];
