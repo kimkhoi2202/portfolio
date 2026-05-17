@@ -4,6 +4,7 @@ import { SpecialZoomLevel, Viewer, Worker } from "@react-pdf-viewer/core";
 import { defaultLayoutPlugin, type ToolbarProps } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { ChevronsUpDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import type React from "react";
@@ -61,6 +62,19 @@ export function ResumeViewer() {
               <GoToNextPage />
             </div>
             <div className="flex min-w-0 items-center gap-1">
+              <Zoom>
+                {({ onZoom }) => (
+                  <button
+                    aria-label="Fit page"
+                    className="rpv-core__minimal-button"
+                    title="Fit page"
+                    type="button"
+                    onClick={() => onZoom(SpecialZoomLevel.PageFit)}
+                  >
+                    <ChevronsUpDown className="size-4" />
+                  </button>
+                )}
+              </Zoom>
               <ZoomOut />
               <div className="hidden min-w-16 text-center text-xs text-muted-foreground sm:block">
                 <Zoom />
@@ -104,7 +118,7 @@ export function ResumeViewer() {
           <Worker workerUrl={workerUrl}>
             <Viewer
               fileUrl={resumeUrl}
-              defaultScale={SpecialZoomLevel.PageWidth}
+              defaultScale={SpecialZoomLevel.PageFit}
               plugins={[defaultLayoutPluginInstance]}
               theme={resolvedTheme === "dark" ? "dark" : "light"}
             />
