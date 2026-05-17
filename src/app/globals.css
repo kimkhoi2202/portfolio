@@ -142,6 +142,11 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
 
+body.resume-page {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .resume-viewer {
   --rpv-core__inner-page-background-color: hsl(var(--muted));
   --rpv-core__minimal-button-color: hsl(var(--foreground));

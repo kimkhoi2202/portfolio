@@ -23,6 +23,11 @@ export function ResumeViewer() {
 
   useEffect(() => {
     setMounted(true);
+    document.body.classList.add("resume-page");
+
+    return () => {
+      document.body.classList.remove("resume-page");
+    };
   }, []);
 
   const renderToolbar = (Toolbar: (props: ToolbarProps) => React.ReactElement) => (
@@ -72,7 +77,7 @@ export function ResumeViewer() {
 
   const defaultLayoutPluginInstance = defaultLayoutPlugin({
     renderToolbar,
-    sidebarTabs: (defaultTabs) => [defaultTabs[0]],
+    sidebarTabs: () => [],
   });
 
   return (
@@ -87,14 +92,14 @@ export function ResumeViewer() {
               Open PDF
             </a>
           </Button>
-          <Button asChild size="sm">
+          <Button asChild variant="outline" size="sm">
             <a href={resumeUrl} download="Khoi-Lam-Resume.pdf">
               Download PDF
             </a>
           </Button>
         </div>
       </div>
-      <div className="resume-viewer h-[calc(100dvh-7rem)] min-h-[620px] overflow-hidden rounded-lg border bg-background shadow-sm">
+      <div className="resume-viewer h-[calc(100dvh-5.5rem)] min-h-[620px] overflow-hidden rounded-lg border bg-background shadow-sm">
         {mounted ? (
           <Worker workerUrl={workerUrl}>
             <Viewer
