@@ -101,11 +101,10 @@ export default function Page() {
             </BlurFade>
             {DATA.work.map((work, id) => (
               <BlurFade
-                key={work.company}
+                key={`${work.company}-${work.start}`}
                 delay={BLUR_FADE_DELAY * 6 + id * 0.05}
               >
                 <ResumeCard
-                  key={work.company}
                   logoUrl={work.logoUrl}
                   altText={work.company}
                   title={work.company}
@@ -127,11 +126,10 @@ export default function Page() {
             </BlurFade>
             {DATA.education.map((education, id) => (
               <BlurFade
-                key={education.school}
+                key={`${education.school}-${education.start}`}
                 delay={BLUR_FADE_DELAY * 8 + id * 0.05}
               >
                 <ResumeCard
-                  key={education.school}
                   href={education.href}
                   logoUrl={education.logoUrl}
                   altText={education.school}
@@ -151,11 +149,10 @@ export default function Page() {
             </BlurFade>
             {DATA.learning.map((course, id) => (
               <BlurFade
-                key={course.school}
+                key={`${course.school}-${course.start}`}
                 delay={BLUR_FADE_DELAY * 10 + id * 0.05}
               >
                 <ResumeCard
-                  key={course.school}
                   href={course.href}
                   logoUrl={course.logoUrl}
                   altText={course.school}

@@ -1,0 +1,108 @@
+"use client";
+
+import { SpecialZoomLevel, Viewer, Worker } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin, type ToolbarProps } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import { useTheme } from "next-themes";
+import type React from "react";
+import { useEffect, useState } from "react";
+
+import { Button } from "@/components/ui/button";
+
+const resumeUrl = "/Khoi-Lam-Resume.pdf";
+const workerUrl = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString();
+
+export function ResumeViewer() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const renderToolbar = (Toolbar: (props: ToolbarProps) => React.ReactElement) => (
+    <Toolbar>
+      {(slots) => {
+        const {
+          CurrentPageInput,
+          EnterFullScreen,
+          GoToNextPage,
+          GoToPreviousPage,
+          NumberOfPages,
+          Print,
+          ShowSearchPopover,
+          Zoom,
+          ZoomIn,
+          ZoomOut,
+        } = slots;
+
+        return (
+          <div className="flex w-full flex-wrap items-center justify-between gap-2 px-2 py-2">
+            <div className="flex min-w-0 items-center gap-1">
+              <ShowSearchPopover />
+              <GoToPreviousPage />
+              <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                <div className="w-12">
+                  <CurrentPageInput />
+                </div>
+                <span>/</span>
+                <NumberOfPages />
+              </div>
+              <GoToNextPage />
+            </div>
+            <div className="flex min-w-0 items-center gap-1">
+              <ZoomOut />
+              <div className="hidden min-w-16 text-center text-xs text-muted-foreground sm:block">
+                <Zoom />
+              </div>
+              <ZoomIn />
+              <EnterFullScreen />
+              <Print />
+            </div>
+          </div>
+        );
+      }}
+    </Toolbar>
+  );
+
+  const defaultLayoutPluginInstance = defaultLayoutPlugin({
+    renderToolbar,
+    sidebarTabs: (defaultTabs) => [defaultTabs[0]],
+  });
+
+  return (
+    <section className="relative left-1/2 w-[min(calc(100vw_-_1.5rem),960px)] -translate-x-1/2 space-y-4 pb-20">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div className="space-y-1">
+          <p className="text-sm text-muted-foreground">Resume</p>
+          <h1 className="text-3xl font-bold tracking-tighter">Khoi Lam</h1>
+        </div>
+        <Button asChild variant="outline" size="sm">
+          <a href={resumeUrl} target="_blank" rel="noreferrer">
+            Open PDF
+          </a>
+        </Button>
+      </div>
+      <div className="resume-viewer h-[calc(100dvh-12rem)] min-h-[560px] overflow-hidden rounded-lg border bg-background shadow-sm">
+        {mounted ? (
+          <Worker workerUrl={workerUrl}>
+            <Viewer
+              fileUrl={resumeUrl}
+              defaultScale={SpecialZoomLevel.PageWidth}
+              plugins={[defaultLayoutPluginInstance]}
+              theme={resolvedTheme === "dark" ? "dark" : "light"}
+            />
+          </Worker>
+        ) : (
+          <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
+            Loading resume...
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
