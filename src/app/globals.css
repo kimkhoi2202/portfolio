@@ -180,6 +180,34 @@ body.resume-page {
   border-radius: calc(var(--radius) - 2px);
 }
 
+.resume-viewer .rpv-toolbar__item,
+.resume-viewer .rpv-zoom__popover-target {
+  align-items: center;
+  display: flex;
+  height: 2rem;
+}
+
+.resume-viewer .rpv-core__minimal-button {
+  align-items: center;
+  display: inline-flex;
+  height: 2rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  width: 2rem;
+}
+
+.resume-viewer .rpv-core__minimal-button svg,
+.resume-viewer .rpv-core__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.resume-viewer .rpv-zoom__popover-target {
+  justify-content: center;
+  min-width: 4.25rem;
+}
+
 .resume-viewer .rpv-core__page-layer::after {
   box-shadow: 0 8px 30px hsl(var(--foreground) / 0.12);
 }
