@@ -5,6 +5,7 @@ import { defaultLayoutPlugin, type ToolbarProps } from "@react-pdf-viewer/defaul
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import type React from "react";
 import { useEffect, useState } from "react";
 
@@ -75,19 +76,25 @@ export function ResumeViewer() {
   });
 
   return (
-    <section className="relative left-1/2 w-[min(calc(100vw_-_1.5rem),960px)] -translate-x-1/2 space-y-4 pb-20">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div className="space-y-1">
-          <p className="text-sm text-muted-foreground">Resume</p>
-          <h1 className="text-3xl font-bold tracking-tighter">Khoi Lam</h1>
-        </div>
-        <Button asChild variant="outline" size="sm">
-          <a href={resumeUrl} target="_blank" rel="noreferrer">
-            Open PDF
-          </a>
+    <section className="relative left-1/2 w-[min(calc(100vw_-_1.5rem),1040px)] -translate-x-1/2 space-y-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <Button asChild variant="outline" size="sm" className="w-fit">
+          <Link href="/">Back Home</Link>
         </Button>
+        <div className="flex flex-wrap items-center gap-2">
+          <Button asChild variant="outline" size="sm">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
+              Open PDF
+            </a>
+          </Button>
+          <Button asChild size="sm">
+            <a href={resumeUrl} download="Khoi-Lam-Resume.pdf">
+              Download PDF
+            </a>
+          </Button>
+        </div>
       </div>
-      <div className="resume-viewer h-[calc(100dvh-12rem)] min-h-[560px] overflow-hidden rounded-lg border bg-background shadow-sm">
+      <div className="resume-viewer h-[calc(100dvh-7rem)] min-h-[620px] overflow-hidden rounded-lg border bg-background shadow-sm">
         {mounted ? (
           <Worker workerUrl={workerUrl}>
             <Viewer
